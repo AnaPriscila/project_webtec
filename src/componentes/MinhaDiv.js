@@ -11,20 +11,22 @@ export default class MinhaDiv extends HTMLElement {
     constructor () {
         super();
 
-        //this.profileName;
-
         this.attachShadow({ mode: 'open' });
         this.userInfo = [];
         this.buscarUsuario();
         this.shadowRoot.innerHTML = `
-            <p>Minha Div: Leafeon e ${this.profileName} --> Meu usuário é: ${this.userInfo.name}</p>
+            <p>Minha Div: ${this.profileName} --> Meu usuário é: ${JSON.stringify(this.userInfo)}</p>
        `;
     }
 
     buscarUsuario() {
+        console.log('Buscando usuário...');
         fetch(`https://api.github.com/users/${this.profileName}`)
-            .then(res => res.json())
-            .then(json => this.userInfo.push(json));
+            .then(res => this.userInfo.push(res.json()))
+            .catch(e => console.log(`Erro!\n\n${e}`));
+
+            //.then(res => res.json())
+            //.then(json => this.userInfo.push(json));
     }
    
     get profileName() {
