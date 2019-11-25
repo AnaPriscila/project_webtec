@@ -15,7 +15,7 @@ export default class MinhaDiv extends HTMLElement {
         this.userInfo = [];
         this.buscarUsuario();
         this.shadowRoot.innerHTML = `
-            <p>Minha Div: ${this.profileName} --> Meu usuário é: ${JSON.stringify(this.userInfo)}</p>
+            <p>Minha Div: ${this.profileName} <!-- Meu usuário é: ${JSON.stringify(this.userInfo)}--></p>
        `;
     }
 

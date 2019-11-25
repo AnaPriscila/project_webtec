@@ -11,20 +11,31 @@ img_imagem.src = listaImagens[indexImagem];
 function confirmarTituloImagem() {
     const button = document.getElementById('btn_definir_titulo');
     const input_titulo = document.getElementById('input_titulo');
-    const h1_titulo = document.createElement('h1');
-    h1_titulo.innerHTML = input_titulo.value;
-    document.body.insertBefore(h1_titulo, document.getElementById('imagem'));    
-    document.body.removeChild(input_titulo);
-    document.body.removeChild(button);
+    const titulo = document.getElementById('titulo');
+    if (titulo == null) {
+        const h1_titulo = document.createElement('h1');
+        h1_titulo.id = 'titulo';
+        h1_titulo.innerHTML = input_titulo.value;
+        const bl1 = document.getElementById('bl1');
+        document.body.insertBefore(h1_titulo, bl1);
+    } else {
+        titulo.innerHTML = input_titulo.value;
+    }
 }
+
+/* função para limpar título -> arrumar erro (pois limpou o site inteiro)*/
+
+function limparTitulo() {
+    const titulo = document.getElementById('titulo');
+    titulo.remove();
+}
+
 
 function mudarImagem(e) {
     const rect = img_imagem.getBoundingClientRect();
     const x = e.clientX;
     const y = e.clientY;
     const input_titulo = document.getElementById('input_titulo');
-    //input_titulo.value = `${rect.left} / ${rect.right}`;
-    //input_titulo.value += ` / ${e.clientX}`;
     if (x <= (rect.left + 150)) {
         indexImagem--;
         if (indexImagem < 0) {

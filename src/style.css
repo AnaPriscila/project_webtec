@@ -3,7 +3,7 @@ html {              /*mudar página*/
 }
 
 body {              /*mudar o corpo do site (minha-div)*/
-    color: rgb(170, 12, 12);
+    color: rgb(47, 21, 117);
 }
 
 h1 {                /*título principal*/
@@ -11,20 +11,48 @@ h1 {                /*título principal*/
     text-align: center;
     font-style: italic;
     text-decoration: underline;
-    font-size: 30px;
+    font-size: 25px;
+}
+
+div#bl1 {           /*container 1*/
+    /*border-style: dashed;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+div#bl2 {           /*container 2*/
+    /*border-style: dashed;*/
+    display: inline-block center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    
+
 }
 
 img {               /*imagem*/
-    width: 38%;
+    width: 100%;
+    height: 100%;
     border: 2px black solid;
-    margin: 0.5em;
-    padding: 0.5em;
     display: block;
-    margin: 0 auto;
+    max-width: 580px;
+    max-height: 400px;
+    min-width: 580px;
+    min-height: 400px;
+    margin: auto auto;
 }
 
-p {                 /*parágrafo abaixo da imagem*/
+p#aut {                 /*parágrafo abaixo da imagem*/
     color: black;
-    text-align: left;
-    font-size: 20px;
+    text-align: right;
+    font-size: 18px;
+}
+
+p#obs {                 /*parágrafo abaixo da imagem*/
+    color: rgb(155, 21, 21);
+    text-align: right;
+    font-size: 13px;
 }

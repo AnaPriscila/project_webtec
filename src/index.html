@@ -8,12 +8,18 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <minha-div profile="AnaPriscila"></minha-div>
-        <minha-div profile="Bulbasauro"></minha-div>
+        <minha-div profile="Leafeon e Bulbasauro"></minha-div>
         <input id="input_titulo" type="text" placeholder="Título da imagem"></input>
-        <button id="btn_definir_titulo" onclick="confirmarTituloImagem()">Definir</button>
-        <img id='imagem' alt='altera imagem' src='\Users\_p\OneDrive\Imagens\Saved Pictures\05rpg.jpg' onclick="mudarImagem(event)">
-        <p>Autor: Ana / bulbasauro</p>
+        <button id="btn_definir_titulo" onclick="confirmarTituloImagem()">Definir Título</button>
+        <button id="btn_limpar" onclick="limparTitulo()">Limpar Título</button>
+        <h1> </h1>
+        <div id='bl1'>
+            <div id='bl2'>
+                <img id='imagem' alt='altera imagem' src='\Users\_p\OneDrive\Imagens\Saved Pictures\05rpg.jpg' onclick="mudarImagem(event)">
+                <p id='obs'>* Para alterar a imagem, clique nos cantos da imagem.</p>
+                <p id='aut'>Autores: Leafeon / Bulbasauro</p>
+            </div>
+        </div>
         <script src='./main.js'></script>
         <script type="module" src='./componentes/MinhaDiv.js'></script>
     </body>
